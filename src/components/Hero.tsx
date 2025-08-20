@@ -61,7 +61,7 @@ const Hero = () => {
               <img 
                 src={heroCarImage} 
                 alt="Archon Roadstar Creation" 
-                className="w-full h-auto object-cover rounded-lg shadow-premium animate-glow-pulse"
+                className="w-full h-auto object-cover rounded-lg shadow-golden animate-golden-glow"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent rounded-lg" />
             </div>

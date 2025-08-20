@@ -67,10 +67,12 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-dark': 'var(--gradient-dark)',
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
 				'glow': 'var(--shadow-glow)',
+				'golden': 'var(--shadow-golden)',
 			},
 			transitionTimingFunction: {
 				'premium': 'var(--transition-premium)',
@@ -126,7 +128,15 @@ export default {
 						boxShadow: 'var(--shadow-glow)'
 					},
 					'50%': {
-						boxShadow: '0 0 80px hsl(200 100% 50% / 0.4)'
+						boxShadow: '0 0 80px hsl(45 100% 65% / 0.6)'
+					}
+				},
+				'golden-glow': {
+					'0%, 100%': {
+						boxShadow: 'var(--shadow-golden)'
+					},
+					'50%': {
+						boxShadow: '0 0 60px hsl(43 100% 55% / 0.7)'
 					}
 				}
 			},
@@ -135,7 +145,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.8s ease-out',
-				'glow-pulse': 'glow-pulse 3s ease-in-out infinite'
+				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+				'golden-glow': 'golden-glow 2.5s ease-in-out infinite'
 			}
 		}
 	},
