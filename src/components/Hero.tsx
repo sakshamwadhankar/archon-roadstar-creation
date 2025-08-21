@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroCarImage from "@/assets/arc-hero-car.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
       
@@ -32,9 +30,7 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="premium" size="lg" className="text-lg px-8 py-6">
-                Explore ARC
-              </Button>
+              
               <Button variant="hero" size="lg" className="text-lg px-8 py-6">
                 Watch Story
               </Button>
@@ -50,7 +46,7 @@ const Hero = () => {
                 <div>0-60 MPH</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">211</div>
+                <div className="text-2xl font-bold text-primary">511</div>
                 <div>Top Speed MPH</div>
               </div>
             </div>
@@ -58,11 +54,7 @@ const Hero = () => {
           
           <div className="relative animate-slide-up">
             <div className="relative">
-              <img 
-                src={heroCarImage} 
-                alt="Archon Roadstar Creation" 
-                className="w-full h-auto object-cover rounded-lg shadow-golden animate-golden-glow"
-              />
+              <img src={heroCarImage} alt="Archon Roadstar Creation" className="w-full h-auto object-cover rounded-lg shadow-golden animate-golden-glow" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent rounded-lg" />
             </div>
           </div>
@@ -75,8 +67,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
