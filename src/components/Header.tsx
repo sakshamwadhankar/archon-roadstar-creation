@@ -9,7 +9,7 @@ const Header = () => {
             <img src="/lovable-uploads/961150df-a464-4cd4-8b84-82c7b536e57f.png" alt="Archon Roadsters Creation" className="h-12 w-auto" />
           </div>
           
-          <div className="flex items-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2">
             <h1 className="text-2xl font-bold text-foreground">ARCHON</h1>
           </div>
           
