@@ -23,10 +23,7 @@ const Hero = () => {
                   Creation
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Where automotive excellence meets cutting-edge innovation. 
-                Experience the pinnacle of luxury performance engineering.
-              </p>
+              <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">Where automotive excellence meets cutting-edge innovation. Experience the pinnacle of luxury performance engineering.</p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
