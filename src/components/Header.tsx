@@ -13,22 +13,25 @@ const Header = () => {
             />
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#performance" className="text-foreground hover:text-primary transition-colors">
-              Performance
-            </a>
-            <a href="#design" className="text-foreground hover:text-primary transition-colors">
-              Design
-            </a>
-            <a href="#specs" className="text-foreground hover:text-primary transition-colors">
-              Specifications
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
-            </a>
+          <div className="text-3xl font-bold font-display bg-gradient-primary bg-clip-text text-transparent">
+            ARCHON
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#performance" className="text-foreground hover:text-primary transition-colors">
+                Performance
+              </a>
+              <a href="#design" className="text-foreground hover:text-primary transition-colors">
+                Design
+              </a>
+              <a href="#specs" className="text-foreground hover:text-primary transition-colors">
+                Specifications
+              </a>
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+                Contact
+              </a>
+            </div>
             <Button variant="hero" size="lg">
               Configure Yours
             </Button>
