@@ -5,13 +5,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold font-display bg-gradient-primary bg-clip-text text-transparent">
-              ARC
-            </div>
-            <div className="text-sm text-muted-foreground hidden md:block">
-              Archon Roadster Creation
-            </div>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/961150df-a464-4cd4-8b84-82c7b536e57f.png" 
+              alt="Archon Roadsters Creation" 
+              className="h-12 w-auto"
+            />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
