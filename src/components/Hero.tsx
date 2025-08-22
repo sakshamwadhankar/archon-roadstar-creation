@@ -28,7 +28,12 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                onClick={() => window.open('https://youtube.com/@archonmotors', '_blank')}
+              >
                 Watch Story
               </Button>
             </div>
