@@ -110,9 +110,9 @@ const Cars = () => {
                         {car.name}
                       </h3>
                       <p className="text-muted-foreground text-sm mb-3">{car.tagline}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-primary">{car.price}</span>
-                        <Button variant="outline" size="sm" className="text-xs">
+                      <div className="space-y-3">
+                        <span className="text-2xl font-bold text-primary block">{car.price}</span>
+                        <Button variant="outline" size="sm" className="text-xs w-full">
                           View Details
                         </Button>
                       </div>
