@@ -80,6 +80,7 @@ export default {
 			fontFamily: {
 				'display': ['Inter', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
+				'brand': ['Orbitron', 'monospace', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

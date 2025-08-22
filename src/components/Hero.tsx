@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <h1 className="text-6xl lg:text-7xl font-bold font-display leading-tight">
+              <h1 className="text-6xl lg:text-7xl font-black font-brand leading-tight tracking-wider uppercase">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Archon
                 </span>
