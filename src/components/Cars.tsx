@@ -17,7 +17,7 @@ const Cars = () => {
       id: 1,
       name: "ARC Phantom Elite",
       tagline: "The Ultimate Luxury Experience",
-      price: "$299,000",
+      price: "₹2,48,17,000",
       image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&h=600&fit=crop",
       specs: {
         engine: "6.0L V12 Twin-Turbo",
@@ -33,7 +33,7 @@ const Cars = () => {
       id: 2,
       name: "ARC Thunder Sport",
       tagline: "Pure Performance Unleashed",
-      price: "$249,000",
+      price: "₹2,06,67,000",
       image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop",
       specs: {
         engine: "5.2L V10 Naturally Aspirated",
@@ -49,7 +49,7 @@ const Cars = () => {
       id: 3,
       name: "ARC Luxe Grand Tourer",
       tagline: "Elegance Meets Performance",
-      price: "$189,000",
+      price: "₹1,56,87,000",
       image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
       specs: {
         engine: "4.0L V8 Twin-Turbo",
@@ -65,7 +65,7 @@ const Cars = () => {
       id: 4,
       name: "ARC Electric Vision",
       tagline: "The Future of Luxury",
-      price: "$199,000",
+      price: "₹1,65,17,000",
       image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=600&fit=crop",
       specs: {
         engine: "Dual Electric Motors",
