@@ -112,7 +112,7 @@ const Cars = () => {
                       <p className="text-muted-foreground text-sm mb-3">{car.tagline}</p>
                       <div className="space-y-3">
                         <span className="text-2xl font-bold text-primary block">{car.price}</span>
-                        <Button variant="outline" size="sm" className="text-xs w-full">
+                        <Button variant="outline" size="sm" className="text-xs w-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
                           View Details
                         </Button>
                       </div>
