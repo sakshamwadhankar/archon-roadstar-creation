@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 const Footer = () => {
   return <footer id="contact" className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-16">
@@ -48,17 +49,17 @@ const Footer = () => {
               Get the latest updates on ARC development and exclusive access to events.
             </p>
             <div className="flex space-x-4">
-              <Button variant="outline" size="icon">
-                <span className="text-lg">📘</span>
+              <Button variant="outline" size="icon" aria-label="Instagram">
+                <Instagram size={18} />
               </Button>
-              <Button variant="outline" size="icon">
-                <span className="text-lg">📷</span>
+              <Button variant="outline" size="icon" aria-label="LinkedIn">
+                <Linkedin size={18} />
               </Button>
-              <Button variant="outline" size="icon">
-                <span className="text-lg">🐦</span>
+              <Button variant="outline" size="icon" aria-label="Twitter">
+                <Twitter size={18} />
               </Button>
-              <Button variant="outline" size="icon">
-                <span className="text-lg">🎬</span>
+              <Button variant="outline" size="icon" aria-label="YouTube">
+                <Youtube size={18} />
               </Button>
             </div>
           </div>
