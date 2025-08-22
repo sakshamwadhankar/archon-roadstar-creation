@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroCarImage from "@/assets/arc-hero-car.jpg";
+import { Car3D } from "@/components/Car3D";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Elements */}
@@ -50,10 +50,7 @@ const Hero = () => {
           </div>
           
           <div className="relative animate-slide-up">
-            <div className="relative">
-              <img src={heroCarImage} alt="Archon Roadstar Creation" className="w-full h-auto object-cover rounded-lg shadow-golden animate-golden-glow" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent rounded-lg" />
-            </div>
+            <Car3D />
           </div>
         </div>
       </div>
