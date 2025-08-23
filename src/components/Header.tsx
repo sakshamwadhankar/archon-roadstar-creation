@@ -13,7 +13,7 @@ const Header = () => {
           </div>
           
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-foreground text-4xl font-extrabold">ARCHON</h1>
+            <h1 className="font-bold text-amber-200 text-center text-5xl">A R C H O N</h1>
           </div>
           
           <DropdownMenu>
