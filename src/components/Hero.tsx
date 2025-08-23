@@ -1,11 +1,28 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "./HeroCarousel";
-import { X } from "lucide-react"; // close icon
+import { X } from "lucide-react";
 
 const Hero = () => {
   const videoRef = useRef(null);
   const [showFullVideo, setShowFullVideo] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("/videos/car.mp4"); // default desktop
+
+  // detect screen size (mobile vs desktop)
+  useEffect(() => {
+    const checkDevice = () => {
+      if (window.innerWidth < 768) {
+        setVideoSrc("/videos/car1.mp4"); // mobile video
+      } else {
+        setVideoSrc("/videos/car.mp4"); // desktop video
+      }
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
 
   const handleWatchStory = () => {
     setShowFullVideo(true);
@@ -13,7 +30,7 @@ const Hero = () => {
     setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.muted = false;
-        videoRef.current.currentTime = 0; // start from beginning
+        videoRef.current.currentTime = 0;
         videoRef.current.play();
       }
     }, 100);
@@ -22,7 +39,7 @@ const Hero = () => {
   const handleCloseVideo = () => {
     if (videoRef.current) {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0; // reset
+      videoRef.current.currentTime = 0;
     }
     setShowFullVideo(false);
   };
@@ -36,13 +53,13 @@ const Hero = () => {
           muted
           playsInline
           loop
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/car.mp4" type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
       )}
 
-      {/* Fullscreen Video (No Controls) */}
+      {/* Fullscreen Video */}
       {showFullVideo && (
         <div className="fixed inset-0 z-50 bg-black">
           {/* Close Button */}
@@ -56,9 +73,9 @@ const Hero = () => {
           <video
             ref={videoRef}
             className="w-full h-full object-cover"
-            onEnded={handleCloseVideo} // close when video ends
+            onEnded={handleCloseVideo}
           >
-            <source src="/videos/car.mp4" type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
       )}
