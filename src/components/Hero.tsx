@@ -42,7 +42,7 @@ const Hero = () => {
         </video>
       )}
 
-      {/* Fullscreen Video */}
+      {/* Fullscreen Video (No Controls) */}
       {showFullVideo && (
         <div className="fixed inset-0 z-50 bg-black">
           {/* Close Button */}
@@ -57,7 +57,6 @@ const Hero = () => {
             ref={videoRef}
             className="w-full h-full object-cover"
             onEnded={handleCloseVideo} // close when video ends
-            controls
           >
             <source src="/videos/car.mp4" type="video/mp4" />
           </video>
@@ -96,7 +95,7 @@ const Hero = () => {
                     className="text-lg px-8 py-6"
                     onClick={handleWatchStory}
                   >
-                    Watch Story
+                    Play
                   </Button>
                 </div>
 
