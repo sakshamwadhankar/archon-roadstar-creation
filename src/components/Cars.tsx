@@ -4,104 +4,75 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import TestDriveForm from "./TestDriveForm";
-
 const Cars = () => {
   const [testDriveOpen, setTestDriveOpen] = useState(false);
   const [selectedCarForTestDrive, setSelectedCarForTestDrive] = useState<string>("");
-
-  const carModels = [
-    {
-      id: 1,
-      name: "ARC Phantom Elite",
-      tagline: "The Ultimate Luxury Experience",
-      price: "₹2,48,17,000",
-      image: "/cars/10.jpg",
-      specs: {
-        engine: "6.0L V12 Twin-Turbo",
-        power: "750 HP",
-        torque: "900 Nm",
-        acceleration: "0-100 km/h in 3.2s",
-        topSpeed: "320 km/h",
-        transmission: "8-Speed Automatic"
-      },
-      features: [
-        "Carbon Fiber Body",
-        "Premium Leather Interior",
-        "Advanced Driver Assistance",
-        "Custom Paint Options"
-      ]
+  const carModels = [{
+    id: 1,
+    name: "ARC Phantom Elite",
+    tagline: "The Ultimate Luxury Experience",
+    price: "₹2,48,17,000",
+    image: "/cars/10.jpg",
+    specs: {
+      engine: "6.0L V12 Twin-Turbo",
+      power: "750 HP",
+      torque: "900 Nm",
+      acceleration: "0-100 km/h in 3.2s",
+      topSpeed: "320 km/h",
+      transmission: "8-Speed Automatic"
     },
-    {
-      id: 2,
-      name: "ARC Thunder Sport",
-      tagline: "Pure Performance Unleashed",
-      price: "₹2,06,67,000",
-      image: "/cars/11.jpg",
-      specs: {
-        engine: "5.2L V10 Naturally Aspirated",
-        power: "650 HP",
-        torque: "750 Nm",
-        acceleration: "0-100 km/h in 3.5s",
-        topSpeed: "305 km/h",
-        transmission: "7-Speed Dual-Clutch"
-      },
-      features: [
-        "Aerodynamic Package",
-        "Track-Tuned Suspension",
-        "Racing Seats",
-        "Performance Exhaust"
-      ]
+    features: ["Carbon Fiber Body", "Premium Leather Interior", "Advanced Driver Assistance", "Custom Paint Options"]
+  }, {
+    id: 2,
+    name: "ARC Thunder Sport",
+    tagline: "Pure Performance Unleashed",
+    price: "₹2,06,67,000",
+    image: "/cars/11.jpg",
+    specs: {
+      engine: "5.2L V10 Naturally Aspirated",
+      power: "650 HP",
+      torque: "750 Nm",
+      acceleration: "0-100 km/h in 3.5s",
+      topSpeed: "305 km/h",
+      transmission: "7-Speed Dual-Clutch"
     },
-    {
-      id: 3,
-      name: "ARC Luxe Grand Tourer",
-      tagline: "Elegance Meets Performance",
-      price: "₹1,56,87,000",
-      image: "/cars/12.jpg",
-      specs: {
-        engine: "4.0L V8 Twin-Turbo",
-        power: "550 HP",
-        torque: "700 Nm",
-        acceleration: "0-100 km/h in 4.1s",
-        topSpeed: "290 km/h",
-        transmission: "8-Speed Automatic"
-      },
-      features: [
-        "Massage Seats",
-        "Premium Sound System",
-        "Panoramic Roof",
-        "Ambient Lighting"
-      ]
+    features: ["Aerodynamic Package", "Track-Tuned Suspension", "Racing Seats", "Performance Exhaust"]
+  }, {
+    id: 3,
+    name: "ARC Luxe Grand Tourer",
+    tagline: "Elegance Meets Performance",
+    price: "₹1,56,87,000",
+    image: "/cars/12.jpg",
+    specs: {
+      engine: "4.0L V8 Twin-Turbo",
+      power: "550 HP",
+      torque: "700 Nm",
+      acceleration: "0-100 km/h in 4.1s",
+      topSpeed: "290 km/h",
+      transmission: "8-Speed Automatic"
     },
-    {
-      id: 4,
-      name: "ARC Electric Vision",
-      tagline: "The Future of Luxury",
-      price: "₹1,65,17,000",
-      image: "/cars/13.jpg",
-      specs: {
-        engine: "Dual Electric Motors",
-        power: "680 HP",
-        torque: "1200 Nm",
-        acceleration: "0-100 km/h in 2.8s",
-        topSpeed: "280 km/h",
-        range: "450 km"
-      },
-      features: [
-        "Fast Charging",
-        "Autopilot",
-        "Glass Roof",
-        "Premium Interior"
-      ]
-    }
-  ];
-
-  return (
-    <section className="py-24 bg-gradient-dark">
+    features: ["Massage Seats", "Premium Sound System", "Panoramic Roof", "Ambient Lighting"]
+  }, {
+    id: 4,
+    name: "ARC Electric Vision",
+    tagline: "The Future of Luxury",
+    price: "₹1,65,17,000",
+    image: "/cars/13.jpg",
+    specs: {
+      engine: "Dual Electric Motors",
+      power: "680 HP",
+      torque: "1200 Nm",
+      acceleration: "0-100 km/h in 2.8s",
+      topSpeed: "280 km/h",
+      range: "450 km"
+    },
+    features: ["Fast Charging", "Autopilot", "Glass Roof", "Premium Interior"]
+  }];
+  return <section className="py-24 bg-gradient-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our <span className="text-primary">Models</span>
+            Our <span className="text-primary">mOdels</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Discover the perfect blend of luxury, performance, and innovation in our exclusive car lineup
@@ -109,17 +80,12 @@ const Cars = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {carModels.map(car => (
-            <Dialog key={car.id}>
+          {carModels.map(car => <Dialog key={car.id}>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer">
                   <div className="relative overflow-hidden rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-golden">
                     <div className="aspect-[4/3] overflow-hidden">
-                      <img
-                        src={car.image}
-                        alt={car.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
+                      <img src={car.image} alt={car.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                     </div>
                     <div className="p-6">
@@ -129,11 +95,7 @@ const Cars = () => {
                       <p className="text-muted-foreground text-sm mb-3">{car.tagline}</p>
                       <div className="space-y-3">
                         <span className="text-2xl font-bold text-primary block">{car.price}</span>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="text-xs w-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
-                        >
+                        <Button variant="outline" size="sm" className="text-xs w-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
                           View Details
                         </Button>
                       </div>
@@ -150,21 +112,13 @@ const Cars = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
                   <div className="space-y-4">
-                    <img
-                      src={car.image}
-                      alt={car.name}
-                      className="w-full h-64 object-cover rounded-lg shadow-golden"
-                    />
+                    <img src={car.image} alt={car.name} className="w-full h-64 object-cover rounded-lg shadow-golden" />
                     <div className="flex items-center justify-between">
                       <span className="text-3xl font-bold text-primary">{car.price}</span>
-                      <Button
-                        variant="premium"
-                        size="lg"
-                        onClick={() => {
-                          setSelectedCarForTestDrive(car.name);
-                          setTestDriveOpen(true);
-                        }}
-                      >
+                      <Button variant="premium" size="lg" onClick={() => {
+                    setSelectedCarForTestDrive(car.name);
+                    setTestDriveOpen(true);
+                  }}>
                         Book Test Drive
                       </Button>
                     </div>
@@ -174,14 +128,12 @@ const Cars = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-foreground mb-3">Specifications</h4>
                       <div className="space-y-2">
-                        {Object.entries(car.specs).map(([key, value]) => (
-                          <div key={key} className="flex justify-between items-center">
+                        {Object.entries(car.specs).map(([key, value]) => <div key={key} className="flex justify-between items-center">
                             <span className="text-muted-foreground capitalize">
                               {key.replace(/([A-Z])/g, " $1")}:
                             </span>
                             <span className="font-medium text-foreground">{value}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
 
@@ -190,15 +142,9 @@ const Cars = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-foreground mb-3">Key Features</h4>
                       <div className="flex flex-wrap gap-2">
-                        {car.features.map((feature, index) => (
-                          <Badge
-                            key={index}
-                            variant="secondary"
-                            className="bg-primary/10 text-primary border-primary/20"
-                          >
+                        {car.features.map((feature, index) => <Badge key={index} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                             {feature}
-                          </Badge>
-                        ))}
+                          </Badge>)}
                       </div>
                     </div>
 
@@ -211,18 +157,11 @@ const Cars = () => {
                   </div>
                 </div>
               </DialogContent>
-            </Dialog>
-          ))}
+            </Dialog>)}
         </div>
 
-        <TestDriveForm
-          isOpen={testDriveOpen}
-          onClose={() => setTestDriveOpen(false)}
-          selectedCar={selectedCarForTestDrive}
-        />
+        <TestDriveForm isOpen={testDriveOpen} onClose={() => setTestDriveOpen(false)} selectedCar={selectedCarForTestDrive} />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Cars;
