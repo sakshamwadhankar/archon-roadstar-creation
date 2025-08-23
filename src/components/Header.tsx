@@ -1,62 +1,125 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { MoreVertical } from "lucide-react";
-import TestDriveForm from "./TestDriveForm";
-const Header = () => {
-  const [testDriveOpen, setTestDriveOpen] = useState(false);
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4">
-        <nav className="flex items-center justify-between">
-      <div className="flex items-center">
-       <img
-         src="/lovable-uploads/961150df-a464-4cd4-8b84-82c7b536e57f.png?v=2"
-         alt="Archon Roadsters Creation"
-        className="h-12 w-auto object-contain"
-      />
+
+const HeroCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  // 👇 Local images from /public/cars/
+const carImages = [
+  { url: "/cars/1.jpg", alt: "Car 1" },
+  { url: "/cars/2.jpg", alt: "Car 2" },
+  { url: "/cars/3.jpg", alt: "Car 3" },
+  { url: "/cars/4.jpg", alt: "Car 4" },
+  { url: "/cars/5.jpg", alt: "Car 5" },
+  { url: "/cars/6.jpg", alt: "Car 6" },
+  { url: "/cars/7.jpg", alt: "Car 7" },
+  { url: "/cars/8.jpg", alt: "Car 8" },
+  { url: "/cars/9.jpg", alt: "Car 9" },
+];
+
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === carImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? carImages.length - 1 : prevIndex - 1
+    );
+  };
+  const goToSlide = (index: number) => setCurrentIndex(index);
+
+  useEffect(() => {
+    if (isPlaying) {
+      const interval = setInterval(nextSlide, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isPlaying, currentIndex]);
+
+  return (
+    <div
+      className="relative group"
+      onMouseEnter={() => setIsPlaying(false)}
+      onMouseLeave={() => setIsPlaying(true)}
+    >
+      {/* Main carousel container */}
+      <div className="relative overflow-hidden rounded-lg shadow-golden">
+        <div
+          className="flex transition-transform duration-700 ease-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {carImages.map((image, index) => (
+            <div key={index} className="min-w-full relative">
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-auto object-cover aspect-[4/3]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent mx-[9px] px-[2px]" />
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation arrows */}
+        <div className="absolute inset-y-0 left-0 flex items-center">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={prevSlide}
+            className="ml-4 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-primary border border-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-300 h-12 w-12"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
+        </div>
+
+        <div className="absolute inset-y-0 right-0 flex items-center">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={nextSlide}
+            className="mr-4 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-primary border border-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-300 h-12 w-12"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {carImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "bg-primary shadow-glow"
+                  : "bg-background/50 hover:bg-background/70"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Play/pause indicator */}
+        <div className="absolute top-4 right-4">
+          <div
+            className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+              isPlaying ? "bg-primary animate-pulse" : "bg-muted-foreground"
+            }`}
+          />
+        </div>
       </div>
 
-          
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="font-bold text-amber-200 text-center mx-0 text-3xl">A R C H O N</h1>
-          </div>
-          
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="ml-auto">
-                <MoreVertical className="h-5 w-5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-48 rounded-br-lg ">
-              <DropdownMenuItem asChild>
-                <a href="#performance" className="w-full cursor-pointer">
-                  Performance
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="#design" className="w-full cursor-pointer">
-                  Design
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="#specs" className="w-full cursor-pointer">
-                  Specifications
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="#contact" className="w-full cursor-pointer">
-                  Contact
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="w-full cursor-pointer" onClick={() => setTestDriveOpen(true)}>
-                Book Test Drive
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </nav>
+      {/* Image counter */}
+      <div className="absolute top-4 left-4 bg-background/20 backdrop-blur-sm px-3 py-1 rounded-full border border-primary/30">
+        <span className="text-sm text-primary font-medium">
+          {currentIndex + 1} / {carImages.length}
+        </span>
       </div>
-
-      <TestDriveForm isOpen={testDriveOpen} onClose={() => setTestDriveOpen(false)} />
-    </header>;
+    </div>
+  );
 };
-export default Header;
+
+export default HeroCarousel;
