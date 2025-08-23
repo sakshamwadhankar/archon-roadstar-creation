@@ -4,15 +4,15 @@ const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero md:bg-black">
       {/* Background Video - Desktop/Tablet Only */}
       <video 
-        autoPlay 
+       autoPlay 
         muted 
-        loop 
         playsInline
+        loop
         className="absolute inset-0 w-full h-full object-cover hidden md:block"
       >
-        <source src="https://videos.pexels.com/video-files/3273134/3273134-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-        <source src="https://videos.pexels.com/video-files/854789/854789-hd_1920_1080_30fps.mp4" type="video/mp4" />
+      <source src="/videos/car.mp4" type="video/mp4" />
       </video>
+
       
       {/* Video Darkening Overlay */}
       <div className="absolute inset-0 bg-black/50 hidden md:block" />
