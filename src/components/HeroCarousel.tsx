@@ -4,34 +4,18 @@ import { Button } from "@/components/ui/button";
 const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const carImages = [{
-    url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&h=600&fit=crop",
-    alt: "Luxury Sports Car - Front View"
-  }, {
-    url: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop",
-    alt: "Luxury Sports Car - Side View"
-  }, {
-    url: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
-    alt: "Luxury Grand Tourer"
-  }, {
-    url: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=600&fit=crop",
-    alt: "Electric Luxury Vehicle"
-  }, {
-    url: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop",
-    alt: "High Performance Roadster"
-  }, {
-    url: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
-    alt: "Luxury Convertible"
-  }, {
-    url: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
-    alt: "Premium Sports Sedan"
-  }, {
-    url: "https://images.unsplash.com/photo-1494905998402-395d579af36f?w=800&h=600&fit=crop",
-    alt: "Exotic Supercar"
-  }, {
-    url: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&h=600&fit=crop",
-    alt: "Luxury SUV"
-  }];
+const carImages = [
+  { url: "/car/1.jpg", alt: "Car 1" },
+  { url: "/car/2.jpg", alt: "Car 2" },
+  { url: "/car/3.jpg", alt: "Car 3" },
+  { url: "/car/4.jpg", alt: "Car 4" },
+  { url: "/car/5.jpg", alt: "Car 5" },
+  { url: "/car/6.jpg", alt: "Car 6" },
+  { url: "/car/7.jpg", alt: "Car 7" },
+  { url: "/car/8.jpg", alt: "Car 8" },
+  { url: "/car/9.jpg", alt: "Car 9" }
+];
+
   const nextSlide = () => {
     setCurrentIndex(prevIndex => prevIndex === carImages.length - 1 ? 0 : prevIndex + 1);
   };
