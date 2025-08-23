@@ -15,7 +15,7 @@ const Hero = () => {
 
       
       {/* Video Darkening Overlay */}
-      <div className="absolute inset-0 bg-black/50 hidden md:block" />
+      <div className="absolute inset-0 bg-black/70 hidden md:block" />
       
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
