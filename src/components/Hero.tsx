@@ -11,15 +11,15 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-6xl lg:text-7xl font-black font-brand leading-tight tracking-wider uppercase">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                <span className="bg-gradient-primary bg-clip-text text-transparent font-semibold text-left text-5xl">
                   Archon
                 </span>
                 <br />
-                <span className="text-foreground">
+                <span className="text-foreground text-5xl">
                   Roadstar
                 </span>
                 <br />
-                <span className="text-accent">
+                <span className="text-accent text-5xl">
                   Creation
                 </span>
               </h1>
@@ -28,12 +28,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={() => window.open('https://youtube.com/@archonmotors', '_blank')}
-              >
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" onClick={() => window.open('https://youtube.com/@archonmotors', '_blank')}>
                 Watch Story
               </Button>
             </div>
