@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative animate-slide-up mx-auto md:mx-0 px-2">
+          <div className="relative animate-slide-up mx-auto ml-0 mr-auto">
             <HeroCarousel />
           </div>
         </div>
