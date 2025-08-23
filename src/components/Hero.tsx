@@ -1,7 +1,21 @@
 import { Button } from "@/components/ui/button";
 import HeroCarousel from "./HeroCarousel";
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero md:bg-black">
+      {/* Background Video - Desktop/Tablet Only */}
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
+      >
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Video Darkening Overlay */}
+      <div className="absolute inset-0 bg-black/50 hidden md:block" />
+      
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
       
