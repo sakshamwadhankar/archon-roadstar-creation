@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import TestDriveForm from "./TestDriveForm";
 const Cars = () => {
+  const [testDriveOpen, setTestDriveOpen] = useState(false);
+  const [selectedCarForTestDrive, setSelectedCarForTestDrive] = useState<string>("");
+
   const carModels = [{
     id: 1,
     name: "ARC Phantom Elite",
@@ -112,8 +116,15 @@ const Cars = () => {
                     <img src={car.image} alt={car.name} className="w-full h-64 object-cover rounded-lg shadow-golden" />
                     <div className="flex items-center justify-between">
                       <span className="text-3xl font-bold text-primary">{car.price}</span>
-                      <Button variant="premium" size="lg">
-                        Configure & Order
+                      <Button 
+                        variant="premium" 
+                        size="lg"
+                        onClick={() => {
+                          setSelectedCarForTestDrive(car.name);
+                          setTestDriveOpen(true);
+                        }}
+                      >
+                        Book Test Drive
                       </Button>
                     </div>
                   </div>
@@ -153,6 +164,12 @@ const Cars = () => {
               </DialogContent>
             </Dialog>)}
         </div>
+
+        <TestDriveForm 
+          isOpen={testDriveOpen} 
+          onClose={() => setTestDriveOpen(false)}
+          selectedCar={selectedCarForTestDrive}
+        />
       </div>
     </section>;
 };

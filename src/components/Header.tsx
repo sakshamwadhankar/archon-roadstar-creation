@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { MoreVertical } from "lucide-react";
+import TestDriveForm from "./TestDriveForm";
 const Header = () => {
+  const [testDriveOpen, setTestDriveOpen] = useState(false);
+
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
@@ -40,10 +44,21 @@ const Header = () => {
                   Contact
                 </a>
               </DropdownMenuItem>
+              <DropdownMenuItem 
+                className="w-full cursor-pointer"
+                onClick={() => setTestDriveOpen(true)}
+              >
+                Book Test Drive
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
       </div>
+
+      <TestDriveForm 
+        isOpen={testDriveOpen} 
+        onClose={() => setTestDriveOpen(false)}
+      />
     </header>;
 };
 export default Header;
