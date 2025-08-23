@@ -5,16 +5,17 @@ const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 const carImages = [
-  { url: "C:/public/cars/1.jpg", alt: "Car 1" },
-  { url: "C:/public/cars/2.jpg", alt: "Car 2" },
-  { url: "C:/public/cars/3.jpg", alt: "Car 3" },
-  { url: "C:/public/cars/4.jpg", alt: "Car 4" },
-  { url: "C:/public/cars/5.jpg", alt: "Car 5" },
-  { url: "C:/public/cars/6.jpg", alt: "Car 6" },
-  { url: "C:/public/cars/7.jpg", alt: "Car 7" },
-  { url: "C:/public/cars/8.jpg", alt: "Car 8" },
-  { url: "C:/public/cars/9.jpg", alt: "Car 9" }
+  { url: "/cars/1.jpg", alt: "Car 1" },
+  { url: "/cars/2.jpg", alt: "Car 2" },
+  { url: "/cars/3.jpg", alt: "Car 3" },
+  { url: "/cars/4.jpg", alt: "Car 4" },
+  { url: "/cars/5.jpg", alt: "Car 5" },
+  { url: "/cars/6.jpg", alt: "Car 6" },
+  { url: "/cars/7.jpg", alt: "Car 7" },
+  { url: "/cars/8.jpg", alt: "Car 8" },
+  { url: "/cars/9.jpg", alt: "Car 9" }
 ];
+
 
   const nextSlide = () => {
     setCurrentIndex(prevIndex => prevIndex === carImages.length - 1 ? 0 : prevIndex + 1);
