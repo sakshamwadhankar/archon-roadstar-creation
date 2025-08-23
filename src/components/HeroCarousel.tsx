@@ -57,7 +57,7 @@ const HeroCarousel = () => {
       }}>
           {carImages.map((image, index) => <div key={index} className="min-w-full relative">
               <img src={image.url} alt={image.alt} className="w-full h-auto object-cover aspect-[4/3]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent mx-[9px] px-[2px]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent px-[2px] mx-0" />
             </div>)}
         </div>
 
