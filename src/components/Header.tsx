@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center bg-slate-200 rounded-sm">
-            <img src="/lovable-uploads/961150df-a464-4cd4-8b84-82c7b536e57f.png" alt="Archon Roadsters Creation" className="h-12 w-auto" />
+            <img src="/lovable-uploads/961150df-a464-4cd4-8b84-82c7b536e57f.png" alt="Archon Roadsters Creation" className="h-12 w-auto object-contain" />
           </div>
           
           <div className="absolute left-1/2 transform -translate-x-1/2">
