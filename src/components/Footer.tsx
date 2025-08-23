@@ -47,10 +47,10 @@ const Footer = () => {
               Get the latest updates on ARC development and exclusive access to events.
             </p>
             <div className="flex space-x-4">
-              <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/archonmotors', '_blank')}>
+              <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
                 <Instagram size={18} />
               </Button>
-              <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://linkedin.com/company/archonmotors', '_blank')}>
+              <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
                 <Linkedin size={18} />
               </Button>
               <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
