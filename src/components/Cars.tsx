@@ -68,35 +68,65 @@ const Cars = () => {
     },
     features: ["Fast Charging", "Autopilot", "Glass Roof", "Premium Interior"]
   }];
-  return <section className="py-24 bg-gradient-dark">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our <span className="text-primary">mOdels</span>
+  return <section className="py-32 bg-gradient-dark relative overflow-hidden">
+      {/* Subtle background effects */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 right-10 w-72 h-72 bg-gradient-primary rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-accent rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-5xl lg:text-6xl font-bold font-display mb-6">
+            Our <span className="bg-gradient-primary bg-clip-text text-transparent">Models</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover the perfect blend of luxury, performance, and innovation in our exclusive car lineup
+          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+            Discover the perfect fusion of luxury, performance, and innovation in our exclusive roadster collection
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {carModels.map(car => <Dialog key={car.id}>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
+          {carModels.map((car, index) => <Dialog key={car.id}>
               <DialogTrigger asChild>
-                <div className="group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-golden">
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img src={car.image} alt={car.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="group cursor-pointer animate-slide-up" style={{ animationDelay: `${index * 150}ms` }}>
+                  <div className="relative overflow-hidden rounded-2xl bg-card/60 backdrop-blur-sm border border-border/30 hover:border-primary/60 transition-all duration-700 hover:shadow-golden hover:scale-[1.02] hover:-translate-y-2">
+                    {/* Card glow effect */}
+                    <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-2xl"></div>
+                    
+                    <div className="aspect-[4/3] overflow-hidden rounded-t-2xl">
+                      <img 
+                        src={car.image} 
+                        alt={car.name} 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                      
+                      {/* Floating price tag */}
+                      <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+                        {car.price}
+                      </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    
+                    <div className="p-8">
+                      <h3 className="text-xl lg:text-2xl font-bold font-display text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                         {car.name}
                       </h3>
-                      <p className="text-muted-foreground text-sm mb-3">{car.tagline}</p>
-                      <div className="space-y-3">
-                        <span className="text-2xl font-bold text-primary block">{car.price}</span>
-                        <Button variant="outline" size="sm" className="text-xs w-full hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
-                          View Details
+                      <p className="text-muted-foreground mb-6 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                        {car.tagline}
+                      </p>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                          <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                          <span>Premium Collection</span>
+                        </div>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="text-xs border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:shadow-glow transform hover:scale-105"
+                        >
+                          Explore
                         </Button>
                       </div>
                     </div>
@@ -104,54 +134,90 @@ const Cars = () => {
                 </div>
               </DialogTrigger>
 
-              <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-bold text-primary">{car.name}</DialogTitle>
-                  <DialogDescription className="text-lg">{car.tagline}</DialogDescription>
+              <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-card/95 backdrop-blur-xl border-border/50 rounded-3xl">
+                <DialogHeader className="text-center pb-6">
+                  <DialogTitle className="text-3xl lg:text-4xl font-bold font-display bg-gradient-primary bg-clip-text text-transparent">
+                    {car.name}
+                  </DialogTitle>
+                  <DialogDescription className="text-xl text-muted-foreground font-light">
+                    {car.tagline}
+                  </DialogDescription>
+                  <div className="w-16 h-1 bg-gradient-primary mx-auto mt-4 rounded-full"></div>
                 </DialogHeader>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-                  <div className="space-y-4">
-                    <img src={car.image} alt={car.name} className="w-full h-64 object-cover rounded-lg shadow-golden" />
-                    <div className="flex items-center justify-between">
-                      <span className="text-3xl font-bold text-primary">{car.price}</span>
-                      <Button variant="premium" size="lg" onClick={() => {
-                    setSelectedCarForTestDrive(car.name);
-                    setTestDriveOpen(true);
-                  }}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                  <div className="space-y-6">
+                    <div className="relative group">
+                      <img 
+                        src={car.image} 
+                        alt={car.name} 
+                        className="w-full h-80 object-cover rounded-2xl shadow-golden group-hover:shadow-glow transition-all duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div className="flex items-center justify-between bg-card/40 backdrop-blur-sm border border-border/30 rounded-xl p-6">
+                      <div>
+                        <p className="text-sm text-muted-foreground mb-1">Starting Price</p>
+                        <span className="text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                          {car.price}
+                        </span>
+                      </div>
+                      <Button 
+                        variant="outline" 
+                        size="lg" 
+                        className="bg-primary/10 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow"
+                        onClick={() => {
+                          setSelectedCarForTestDrive(car.name);
+                          setTestDriveOpen(true);
+                        }}
+                      >
                         Book Test Drive
                       </Button>
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="text-lg font-semibold text-foreground mb-3">Specifications</h4>
-                      <div className="space-y-2">
-                        {Object.entries(car.specs).map(([key, value]) => <div key={key} className="flex justify-between items-center">
-                            <span className="text-muted-foreground capitalize">
-                              {key.replace(/([A-Z])/g, " $1")}:
+                  <div className="space-y-8">
+                    <div className="bg-card/30 backdrop-blur-sm border border-border/30 rounded-2xl p-6">
+                      <h4 className="text-xl font-semibold font-display text-foreground mb-6 flex items-center">
+                        <span className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></span>
+                        Technical Specifications
+                      </h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {Object.entries(car.specs).map(([key, value]) => (
+                          <div key={key} className="flex flex-col space-y-1 p-3 bg-card/50 rounded-lg hover:bg-card/70 transition-colors duration-300">
+                            <span className="text-xs text-muted-foreground uppercase tracking-wide">
+                              {key.replace(/([A-Z])/g, " $1")}
                             </span>
-                            <span className="font-medium text-foreground">{value}</span>
-                          </div>)}
+                            <span className="font-semibold text-foreground text-lg">{value}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    <Separator />
+                    <Separator className="bg-border/30" />
 
-                    <div>
-                      <h4 className="text-lg font-semibold text-foreground mb-3">Key Features</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {car.features.map((feature, index) => <Badge key={index} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                    <div className="bg-card/30 backdrop-blur-sm border border-border/30 rounded-2xl p-6">
+                      <h4 className="text-xl font-semibold font-display text-foreground mb-6 flex items-center">
+                        <span className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></span>
+                        Premium Features
+                      </h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {car.features.map((feature, index) => (
+                          <Badge 
+                            key={index} 
+                            variant="secondary" 
+                            className="bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors duration-300 py-2 px-4 justify-center"
+                          >
                             {feature}
-                          </Badge>)}
+                          </Badge>
+                        ))}
                       </div>
                     </div>
 
-                    <div className="pt-4">
-                      <p className="text-sm text-muted-foreground">
-                        Experience the pinnacle of automotive excellence with {car.name}. Every detail has been crafted
-                        to deliver an unparalleled driving experience.
+                    <div className="bg-card/30 backdrop-blur-sm border border-border/30 rounded-2xl p-6">
+                      <p className="text-muted-foreground leading-relaxed text-center">
+                        Experience the pinnacle of automotive excellence with <span className="text-primary font-semibold">{car.name}</span>. 
+                        Every detail has been meticulously crafted to deliver an unparalleled driving experience that transcends mere transportation.
                       </p>
                     </div>
                   </div>
