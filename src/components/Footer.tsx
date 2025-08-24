@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
+
 const Footer = () => {
-  return <footer id="contact" className="bg-card border-t border-border">
+  return (
+    <footer id="contact" className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-3 gap-12">
+          
+          {/* ARC Description */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
               <div className="text-3xl font-bold font-display bg-gradient-primary bg-clip-text text-transparent">
@@ -14,10 +18,11 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              At ARC, we are shaping the future of automotive excellence with innovative engineering and cutting-edge technology. Every vehicle reflects our commitment to performance, precision, and design. Our mission is to deliver an unmatched driving experience that inspires and excites
+              Pioneering the future of automotive excellence through innovative engineering and uncompromising performance.
             </p>
           </div>
-          
+
+          {/* Vehicle & Company Links */}
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h4 className="font-semibold font-display text-foreground mb-4">Vehicle</h4>
@@ -38,46 +43,47 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          
-          <div>
+
+          {/* Team Members */}
+          <div className="space-y-6">
             <h4 className="font-semibold font-display text-foreground mb-4">Meet the Creators of ARC</h4>
-    
-            <p className="text-muted-foreground mb-6">
-              Saksham Wadhankar | Founder
-
-            </p>
-            <div className="flex space-x-4">
-              <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
-                <Instagram size={18} />
-              </Button>
-              <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
-                <Linkedin size={18} />
-              </Button>
-              <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
-                <Twitter size={18} />
-              </Button>
+            
+            {/* Member 1 */}
+            <div className="flex items-center justify-between">
+              <span className="text-muted-foreground font-medium">Saksham Wadhankar | Founder</span>
+              <div className="flex space-x-2">
+                <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
+                  <Instagram size={18} />
+                </Button>
+                <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
+                  <Linkedin size={18} />
+                </Button>
+                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
+                  <Twitter size={18} />
+                </Button>
+              </div>
             </div>
-            <p className="text-muted-foreground mb-6">
-            </p>
-            <p className="text-muted-foreground mb-6">
 
-              Om Rai |  CEO
-            </p>
-                        <div className="flex space-x-4">
-              <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
-                <Instagram size={18} />
-              </Button>
-              <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
-                <Linkedin size={18} />
-              </Button>
-              <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
-                <Twitter size={18} />
-              </Button>
-              
+            {/* Member 2 */}
+            <div className="flex items-center justify-between">
+              <span className="text-muted-foreground font-medium">Om Rai | CEO</span>
+              <div className="flex space-x-2">
+                <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/omrai_profile', '_blank')}>
+                  <Instagram size={18} />
+                </Button>
+                <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/omrai_profile', '_blank')}>
+                  <Linkedin size={18} />
+                </Button>
+                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/omrai_profile', '_blank')}>
+                  <Twitter size={18} />
+                </Button>
+              </div>
             </div>
+
           </div>
         </div>
-        
+
+        {/* Footer Bottom */}
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">© 2025 Archon Motors. All rights reserved.</p>
@@ -89,6 +95,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
