@@ -58,7 +58,7 @@ const Footer = () => {
                 <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
                   <Linkedin size={18} />
                 </Button>
-                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/Sakshamwadhanka', '_blank')}>
                   <Twitter size={18} />
                 </Button>
               </div>
