@@ -14,10 +14,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Pioneering the future of automotive excellence through innovative 
-              engineering and uncompromising performance.
+              At ARC, we are shaping the future of automotive excellence with innovative engineering and cutting-edge technology. Every vehicle reflects our commitment to performance, precision, and design. Our mission is to deliver an unmatched driving experience that inspires and excites
             </p>
-            
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -42,9 +40,11 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold font-display text-foreground mb-4">Stay Connected</h4>
+            <h4 className="font-semibold font-display text-foreground mb-4">Meet the Creators of ARC</h4>
+    
             <p className="text-muted-foreground mb-6">
-              Get the latest updates on ARC development and exclusive access to events.
+              Saksham Wadhankar | Founder
+
             </p>
             <div className="flex space-x-4">
               <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
@@ -56,9 +56,24 @@ const Footer = () => {
               <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
                 <Twitter size={18} />
               </Button>
-              <Button variant="outline" size="icon" aria-label="YouTube" onClick={() => window.open('https://youtube.com/@archonmotors', '_blank')}>
-                <Youtube size={18} />
+            </div>
+            <p className="text-muted-foreground mb-6">
+            </p>
+            <p className="text-muted-foreground mb-6">
+
+              Om Rai |  CEO
+            </p>
+                        <div className="flex space-x-4">
+              <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
+                <Instagram size={18} />
               </Button>
+              <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
+                <Linkedin size={18} />
+              </Button>
+              <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/archonmotors', '_blank')}>
+                <Twitter size={18} />
+              </Button>
+              
             </div>
           </div>
         </div>
