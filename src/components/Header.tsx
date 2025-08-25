@@ -51,6 +51,11 @@ const Header = () => {
               <DropdownMenuItem className="w-full cursor-pointer" onClick={() => setTestDriveOpen(true)}>
                 Book Test Drive
               </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="/customize" className="w-full cursor-pointer">
+                  Customize Your Car
+                </a>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
