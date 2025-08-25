@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import TestDriveForm from "./TestDriveForm";
+import CustomizeButton from "./CustomizeButton";
 const Cars = () => {
   const [testDriveOpen, setTestDriveOpen] = useState(false);
   const [selectedCarForTestDrive, setSelectedCarForTestDrive] = useState<string>("");
@@ -224,6 +225,11 @@ const Cars = () => {
                 </div>
               </DialogContent>
             </Dialog>)}
+        </div>
+
+        {/* Customize Button */}
+        <div className="mt-16 animate-fade-in" style={{ animationDelay: "800ms" }}>
+          <CustomizeButton />
         </div>
 
         <TestDriveForm isOpen={testDriveOpen} onClose={() => setTestDriveOpen(false)} selectedCar={selectedCarForTestDrive} />
