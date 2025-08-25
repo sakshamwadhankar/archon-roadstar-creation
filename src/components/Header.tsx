@@ -17,7 +17,7 @@ const Header = () => {
       </div>
 
           
-          <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className="absolute left-1/2 transform -translate-x-1/2 hidden sm:block">
             <h1 className="font-bold text-amber-200 text-center mx-0 text-3xl">A R C H O N</h1>
           </div>
           
