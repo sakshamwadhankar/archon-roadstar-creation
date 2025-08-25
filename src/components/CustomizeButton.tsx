@@ -10,13 +10,13 @@ interface CustomizeButtonProps {
 
 const CustomizeButton = ({ className, size = "lg", variant = "default" }: CustomizeButtonProps) => {
   return (
-    <div className="flex justify-center w-full">
+    <div className="hidden md:flex justify-center w-full">
       <Button
         asChild
         variant={variant === "default" ? "premium" : "outline"}
         size={size}
         className={cn(
-          "group relative overflow-hidden rounded-xl shadow-lg hover:shadow-glow transform hover:scale-105 transition-all duration-300 font-semibold text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto",
+          "group relative overflow-hidden rounded-xl shadow-lg hover:shadow-glow transform hover:scale-105 transition-all duration-300 font-semibold text-lg px-8 py-3",
           variant === "outline" && "border-primary hover:bg-primary hover:text-primary-foreground",
           className
         )}
