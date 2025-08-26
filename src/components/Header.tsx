@@ -34,28 +34,33 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 className="ml-auto hidden md:flex"
+                className="cursor-target"
               >
                 <MoreVertical className="h-5 w-5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 rounded-br-lg ">
               <DropdownMenuItem asChild>
-                <a href="#performance" className="w-full cursor-pointer">
+                <a href="#performance" className="w-full cursor-pointer"
+                className="cursor-target">
                   Performance
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#design" className="w-full cursor-pointer">
+                <a href="#design" className="w-full cursor-pointer"
+                className="cursor-target">
                   Design
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#specs" className="w-full cursor-pointer">
+                <a href="#specs" className="w-full cursor-pointer"
+                className="cursor-target">
                   Specifications
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#contact" className="w-full cursor-pointer">
+                <a href="#contact" className="w-full cursor-pointer"
+                className="cursor-target">
                   Contact
                 </a>
               </DropdownMenuItem>
@@ -69,6 +74,7 @@ const Header = () => {
                 <a
                   href="https://archon-roadstar-creation-customize.vercel.app/"
                   className="w-full cursor-pointer"
+                  className="cursor-target"
                 >
                   Customize Your Car
                 </a>

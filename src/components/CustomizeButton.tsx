@@ -19,7 +19,7 @@ const CustomizeButton = ({ className, size = "lg", variant = "default" }: Custom
           className
         )}
       >
-        <span className="relative z-10">Customize Your Car</span>
+        <span className="relative z-10" className="cursor-target">Customize Your Car</span>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
       </a>
     </div>

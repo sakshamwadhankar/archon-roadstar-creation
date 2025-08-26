@@ -27,19 +27,28 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold font-display text-foreground mb-4">Vehicle</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Performance</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Design</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Technology</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Customization</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Performance</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Design</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Technology</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Customization</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold font-display text-foreground mb-4">Company</h4>
+              <h4 className="font-semibold font-display text-foreground mb-4"
+              className="cursor-target">Company</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Press</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">About Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Careers</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Press</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors"
+                className="cursor-target">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -52,13 +61,13 @@ const Footer = () => {
             <div className="flex items-center justify-between">
               <span className="text-muted-foreground font-medium">Saksham Wadhankar | Founder</span>
               <div className="flex space-x-2">
-                <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/saksham_wadhankar', '_blank')}className="cursor-target">
                   <Instagram size={18} />
                 </Button>
-                <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/saksham-wadhankar-b0775329a', '_blank')}className="cursor-target">
                   <Linkedin size={18} />
                 </Button>
-                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/Sakshamwadhanka', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/Sakshamwadhanka', '_blank')}className="cursor-target">
                   <Twitter size={18} />
                 </Button>
               </div>
@@ -68,13 +77,13 @@ const Footer = () => {
             <div className="flex items-center justify-between">
               <span className="text-muted-foreground font-medium">Om Rai | CEO</span>
               <div className="flex space-x-2">
-                <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/omrai_profile', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="Instagram" onClick={() => window.open('https://instagram.com/omrai_profile', '_blank')}className="cursor-target">
                   <Instagram size={18} />
                 </Button>
-                <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/omrai_profile', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="LinkedIn" onClick={() => window.open('https://www.linkedin.com/in/omrai_profile', '_blank')}className="cursor-target">
                   <Linkedin size={18} />
                 </Button>
-                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/omrai_profile', '_blank')}>
+                <Button variant="outline" size="icon" aria-label="Twitter" onClick={() => window.open('https://twitter.com/omrai_profile', '_blank')}className="cursor-target">
                   <Twitter size={18} />
                 </Button>
               </div>

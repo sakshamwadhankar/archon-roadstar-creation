@@ -99,6 +99,7 @@ const Hero = () => {
                   variant="hero"
                   size="lg"
                   className="text-lg px-8 py-6"
+                  className="cursor-target"
                   onClick={handlePlayVideo}
                >
                   PLAY
