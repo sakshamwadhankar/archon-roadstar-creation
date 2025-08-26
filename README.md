@@ -47,4 +47,3 @@ License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 Contact
 
-For any questions or inquiries, please feel free to reach out to [ArconCreations] at [ArconCreationsemail@nomail.com] or through a GitHub issue.
