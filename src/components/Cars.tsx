@@ -125,8 +125,7 @@ const Cars = () => {
                         <Button
                           variant="outline" 
                           size="sm" 
-                          className="cursor-target"
-                          className="text-xs border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:shadow-glow transform hover:scale-105"
+                          className="cursor-target text-xs border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:shadow-glow transform hover:scale-105"
                         >
                           Explore
                         </Button>

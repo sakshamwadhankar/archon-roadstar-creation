@@ -98,8 +98,7 @@ const Hero = () => {
                <Button
                   variant="hero"
                   size="lg"
-                  className="text-lg px-8 py-6"
-                  className="cursor-target"
+                   className="text-lg px-8 py-6 cursor-target"
                   onClick={handlePlayVideo}
                >
                   PLAY

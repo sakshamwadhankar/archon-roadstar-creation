@@ -33,34 +33,29 @@ const Header = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="ml-auto hidden md:flex"
-                className="cursor-target"
+                className="ml-auto hidden md:flex cursor-target"
               >
                 <MoreVertical className="h-5 w-5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 rounded-br-lg ">
               <DropdownMenuItem asChild>
-                <a href="#performance" className="w-full cursor-pointer"
-                className="cursor-target">
+                <a href="#performance" className="w-full cursor-pointer cursor-target">
                   Performance
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#design" className="w-full cursor-pointer"
-                className="cursor-target">
+                <a href="#design" className="w-full cursor-pointer cursor-target">
                   Design
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#specs" className="w-full cursor-pointer"
-                className="cursor-target">
+                <a href="#specs" className="w-full cursor-pointer cursor-target">
                   Specifications
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#contact" className="w-full cursor-pointer"
-                className="cursor-target">
+                <a href="#contact" className="w-full cursor-pointer cursor-target">
                   Contact
                 </a>
               </DropdownMenuItem>
@@ -73,8 +68,7 @@ const Header = () => {
               <DropdownMenuItem asChild>
                 <a
                   href="https://archon-roadstar-creation-customize.vercel.app/"
-                  className="w-full cursor-pointer"
-                  className="cursor-target"
+                  className="w-full cursor-pointer cursor-target"
                 >
                   Customize Your Car
                 </a>
