@@ -38,13 +38,11 @@ const Footer = () => {
               <ul className="space-y-2 text-muted-foreground">
                 {/* ✅ About Us same tab me open hoga */}
                 <li>
-                  <a 
-                    href="/about.html" 
-                    className="hover:text-primary transition-colors cursor-target"
-                  >
+                  <a href="/about" className="hover:text-primary transition-colors cursor-target">
                     About Us
                   </a>
                 </li>
+
                 <li><a href="#" className="hover:text-primary transition-colors cursor-target">Careers</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors cursor-target">Press</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors cursor-target">Contact</a></li>
